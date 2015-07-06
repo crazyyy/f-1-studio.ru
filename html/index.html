@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
 
 </head>
@@ -540,189 +541,189 @@
   </div> -->
 
 
-
+<!--
     <div id="parallax" style="position:absolute; top:0; left: -5000px; overflow: hidden; width: 5000px;">
         <img src="img/bg1.jpg" alt=""><img src="img/bg3.jpg" alt=""><img src="img/bg4.jpg" alt=""><img src="img/bg2.jpg" alt="">
-    </div>
+    </div> -->
 
-    <div id="cbh_widget_wrapper" style="height: 868px;">
-        <div class="cbh-widget en cbh-show" id="cbh_phone" style="opacity: 1; left: 1319px; top: 638px;">
-            <div class="cbh-widget-global-icon">
-                <div class="cbh-widget-bg"><span class="cbh-bg-icon"></span>
-                </div>
-                <div class="cbh-widget-content">
-                    <div class="cbh-widget-phone"><span class="cbh-widget-phone-icon"></span>
-                    </div>
-                    <div class="cbh-widget-call"><span class="cbh-widget-call-icon"></span>
-                    </div>
-                    <div class="cbh-widget-rating cbh-rotate-icon"><span class="cbh-widget-rating-value">5.0</span><span class="cbh-widget-rating-icon"></span>
-                    </div>
-                    <div class="cbh-widget-logo"><span class="cbh-widget-logo-icon"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cbh cbh-on cbh-hide" id="cbh_container" style="height: 868px;">
-            <div class="cbh-background no-blur">
-                <div class="cbh-blured"></div>
-                <div class="cbh-faded no-blur"></div>
-            </div>
-            <div class="cbh-arrow">
-                <div class="cbh-arrow-wrapper">
-                    <div class="cbh-arrow-part"></div>
-                    <div class="cbh-arrow-part cbh-bottom"></div>
-                </div>
-            </div>
-            <div class="cbh-body">
-                <div class="cbh-x" id="cbh-x"></div>
-                <div class="cbh-icons">
-                    <div class="cbh-icon cbh-icon-phone cbh-icon-anim1">
-                        <div class="cbh-img"></div>
-                        <div class="cbh-text">Call</div>
-                    </div>
-                    <div class="cbh-icon cbh-icon-dialog cbh-icon-anim2 cbh-active">
-                        <div class="cbh-img"></div>
-                        <div class="cbh-text">Dialog</div>
-                    </div>
-                    <div class="cbh-icon cbh-icon-subscribe cbh-icon-anim3">
-                        <div class="cbh-img"></div>
-                        <div class="cbh-text">E-mail</div>
-                    </div>
-                </div>
-                <div class="cbh-wrapper">
-                    <div class="cbh-item" style="height: 253px;" id="cbh_item_call">
-                        <div class="cbh-text">
-                            <div id="cbh_status" class="cbh-status cbh-big-text cbh-typing j-cbh-big-text-now">Мы перезвоним вам
-                                <br>за 36000 сек. Засекайте!</div>
-                            <input type="text" class="cbh-input" id="cbh_phone_input" value="" placeholder="Введите ваш номер" maxlength="18">
-                            <div class="cbh-button" id="cbh_send" style="margin-bottom: 15px">Жду звонка!</div>
-                            <div class="cbh-timer cbh-clear" id="cbh_timer"></div>
-                            <div id="cbh_info" class="cbh-info"></div>
-                            <div class="cbh-item-later" id=""><span class="cbh-item-later__link" href="">Выбрать удобное время звонка</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cbh-item" style="height: 253px;" id="cbh_item_call_deferred">
-                        <div class="cbh-text">
-                            <div class="cbh-big-text cbh-typing j-cbh-big-text-later" id="cbh_item_call_deferred_head"></div>
-                            <div class="cbh-normal-text cbh-typing" id="cbh_item_call_deferred_text"></div>
-                            <div class="cbh-deferred">
-                                <div class="cbh-deferred__day"><span class="cbh-deferred__day-val" data-day="1436133046040">сегодня</span>
-                                    <div class="cbh-timer-sel cbh-hide" id="cbh_timer_sel_day">
-                                        <ul class="cbh-timer-sel__hold cbh-timer-sel__hold__day">
-                                            <li><span data-day="1436133046040">сегодня</span>
-                                            </li>
-                                            <li><span data-day="1436219446040">завтра</span>
-                                            </li>
-                                            <li><span data-day="1436305846040">послезавтра</span>
-                                            </li>
-                                            <li><span data-day="1436392246040">9 июл</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div><span class="cbh-deferred__sep"> в </span>
-                                <div class="cbh-deferred__hour"><span class="cbh-deferred__hour-val">09:00</span>
-                                    <div class="cbh-timer-sel cbh-hide" id="cbh_timer_sel_hour">
-                                        <ul class="cbh-timer-sel__hold cbh-timer-sel__hold__hour">
-                                            <li><span>09:00</span>
-                                            </li>
-                                            <li><span>10:00</span>
-                                            </li>
-                                            <li><span>11:00</span>
-                                            </li>
-                                            <li><span>12:00</span>
-                                            </li>
-                                            <li><span>13:00</span>
-                                            </li>
-                                            <li><span>14:00</span>
-                                            </li>
-                                            <li><span>15:00</span>
-                                            </li>
-                                            <li><span>16:00</span>
-                                            </li>
-                                            <li><span>17:00</span>
-                                            </li>
-                                            <li><span>18:00</span>
-                                            </li>
-                                            <li><span>19:00</span>
-                                            </li>
-                                            <li><span>20:00</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="text" class="cbh-input" id="cbh_phone_input_deferred" value="" placeholder="Введите ваш номер" maxlength="18">
-                            <div class="cbh-button" id="cbh_send_deferred">Жду звонка!</div>
-                            <div class="cbh-info" id="cbh_deferred_info"></div>
-                        </div>
-                    </div>
-                    <div class="cbh-item" id="cbh_item_call_rating" style="height: 200px;">
-                        <div class="cbh-text">
-                            <div class="cbh-big-text cbh-typing">— Сообщите нам,</div>
-                            <div class="cbh-normal-text cbh-typing">насколько вам понравилось общение с менеджером?</div>
-                            <ul class="cbh-call-rating">
-                                <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_1" data-value="1">1</a>
-                                </li>
-                                <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_2" data-value="2">2</a>
-                                </li>
-                                <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_3" data-value="3">3</a>
-                                </li>
-                                <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_4" data-value="4">4</a>
-                                </li>
-                                <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_5" data-value="5">5</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="cbh-item cbh-show" id="cbh_item_dialog" style="height: 262px !important; bottom: 0px !important;">
-                        <div class="cbh-text" id="cbh_item_dialog_content">
-                            <div class="cbh-big-text cbh-typed undefined">— Упс, сейчас</div>
-                            <div class="cbh-normal-text cbh-typed">в офисе ни души. Закажем на завтра обратный звонок или напишем письмо?<span class="cbh-cursor">_</span>
-                            </div>
-                            <div class="cbh-form cbh-show">
-                                <div>
-                                    <div data-index="0" class="cbh-form-elem">
-                                        <div class="cbh-button">Закажем звонок</div>
-                                    </div>
-                                    <div class="cbh-form-error-message" id="cbh_form_error_0"></div>
-                                </div>
-                                <div>
-                                    <div data-index="1" class="cbh-form-elem">
-                                        <div class="cbh-button">Напишем письмо</div>
-                                    </div>
-                                    <div class="cbh-form-error-message" id="cbh_form_error_1"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cbh-item" id="cbh_chat" style="height: 60%;">
-                        <div class="cbh-text">
-                            <div class="cbh-big-text cbh-centered cbh-typing">Мгновенный чат</div>
-                            <div class="cbh-normal-text cbh-centered cbh-typing">Общайтесь. Делитесь. Пишите.</div>
-                        </div>
-                        <div class="cbh-chat">
-                            <div class="cbh-messages">
-                                <div class="cbh-messages-wrapper">
-                                    <div id="cbh_chat_messages" class="cbh-messages-scrollable"></div>
-                                </div>
-                            </div>
-                            <div class="cbh-chat-input">
-                                <input type="text" class="cbh-input" id="cbh_chat_msg" placeholder="Напишите сообщение и нажмите Enter">
-                                <div class="cbh-btn" id="cbh_chat_send">Отправить</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cbh-powered-by"><a href="http://callbackhunter.com/free?utm_source=widget" class="cbh-powered-by-link" target="_blank">New communication standard by&nbsp;callbackhunter.com</a>
-                </div>
-            </div>
-            <div class="cbh-branding"></div>
-        </div>
-    </div>
-    <div>
-        <div class="cbh-banner-bg" style="display: none;"></div>
-    </div>
+  <!--   <div id="cbh_widget_wrapper" style="height: 868px;">
+      <div class="cbh-widget en cbh-show" id="cbh_phone" style="opacity: 1; left: 1319px; top: 638px;">
+          <div class="cbh-widget-global-icon">
+              <div class="cbh-widget-bg"><span class="cbh-bg-icon"></span>
+              </div>
+              <div class="cbh-widget-content">
+                  <div class="cbh-widget-phone"><span class="cbh-widget-phone-icon"></span>
+                  </div>
+                  <div class="cbh-widget-call"><span class="cbh-widget-call-icon"></span>
+                  </div>
+                  <div class="cbh-widget-rating cbh-rotate-icon"><span class="cbh-widget-rating-value">5.0</span><span class="cbh-widget-rating-icon"></span>
+                  </div>
+                  <div class="cbh-widget-logo"><span class="cbh-widget-logo-icon"></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="cbh cbh-on cbh-hide" id="cbh_container" style="height: 868px;">
+          <div class="cbh-background no-blur">
+              <div class="cbh-blured"></div>
+              <div class="cbh-faded no-blur"></div>
+          </div>
+          <div class="cbh-arrow">
+              <div class="cbh-arrow-wrapper">
+                  <div class="cbh-arrow-part"></div>
+                  <div class="cbh-arrow-part cbh-bottom"></div>
+              </div>
+          </div>
+          <div class="cbh-body">
+              <div class="cbh-x" id="cbh-x"></div>
+              <div class="cbh-icons">
+                  <div class="cbh-icon cbh-icon-phone cbh-icon-anim1">
+                      <div class="cbh-img"></div>
+                      <div class="cbh-text">Call</div>
+                  </div>
+                  <div class="cbh-icon cbh-icon-dialog cbh-icon-anim2 cbh-active">
+                      <div class="cbh-img"></div>
+                      <div class="cbh-text">Dialog</div>
+                  </div>
+                  <div class="cbh-icon cbh-icon-subscribe cbh-icon-anim3">
+                      <div class="cbh-img"></div>
+                      <div class="cbh-text">E-mail</div>
+                  </div>
+              </div>
+              <div class="cbh-wrapper">
+                  <div class="cbh-item" style="height: 253px;" id="cbh_item_call">
+                      <div class="cbh-text">
+                          <div id="cbh_status" class="cbh-status cbh-big-text cbh-typing j-cbh-big-text-now">Мы перезвоним вам
+                              <br>за 36000 сек. Засекайте!</div>
+                          <input type="text" class="cbh-input" id="cbh_phone_input" value="" placeholder="Введите ваш номер" maxlength="18">
+                          <div class="cbh-button" id="cbh_send" style="margin-bottom: 15px">Жду звонка!</div>
+                          <div class="cbh-timer cbh-clear" id="cbh_timer"></div>
+                          <div id="cbh_info" class="cbh-info"></div>
+                          <div class="cbh-item-later" id=""><span class="cbh-item-later__link" href="">Выбрать удобное время звонка</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="cbh-item" style="height: 253px;" id="cbh_item_call_deferred">
+                      <div class="cbh-text">
+                          <div class="cbh-big-text cbh-typing j-cbh-big-text-later" id="cbh_item_call_deferred_head"></div>
+                          <div class="cbh-normal-text cbh-typing" id="cbh_item_call_deferred_text"></div>
+                          <div class="cbh-deferred">
+                              <div class="cbh-deferred__day"><span class="cbh-deferred__day-val" data-day="1436133046040">сегодня</span>
+                                  <div class="cbh-timer-sel cbh-hide" id="cbh_timer_sel_day">
+                                      <ul class="cbh-timer-sel__hold cbh-timer-sel__hold__day">
+                                          <li><span data-day="1436133046040">сегодня</span>
+                                          </li>
+                                          <li><span data-day="1436219446040">завтра</span>
+                                          </li>
+                                          <li><span data-day="1436305846040">послезавтра</span>
+                                          </li>
+                                          <li><span data-day="1436392246040">9 июл</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div><span class="cbh-deferred__sep"> в </span>
+                              <div class="cbh-deferred__hour"><span class="cbh-deferred__hour-val">09:00</span>
+                                  <div class="cbh-timer-sel cbh-hide" id="cbh_timer_sel_hour">
+                                      <ul class="cbh-timer-sel__hold cbh-timer-sel__hold__hour">
+                                          <li><span>09:00</span>
+                                          </li>
+                                          <li><span>10:00</span>
+                                          </li>
+                                          <li><span>11:00</span>
+                                          </li>
+                                          <li><span>12:00</span>
+                                          </li>
+                                          <li><span>13:00</span>
+                                          </li>
+                                          <li><span>14:00</span>
+                                          </li>
+                                          <li><span>15:00</span>
+                                          </li>
+                                          <li><span>16:00</span>
+                                          </li>
+                                          <li><span>17:00</span>
+                                          </li>
+                                          <li><span>18:00</span>
+                                          </li>
+                                          <li><span>19:00</span>
+                                          </li>
+                                          <li><span>20:00</span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                          <input type="text" class="cbh-input" id="cbh_phone_input_deferred" value="" placeholder="Введите ваш номер" maxlength="18">
+                          <div class="cbh-button" id="cbh_send_deferred">Жду звонка!</div>
+                          <div class="cbh-info" id="cbh_deferred_info"></div>
+                      </div>
+                  </div>
+                  <div class="cbh-item" id="cbh_item_call_rating" style="height: 200px;">
+                      <div class="cbh-text">
+                          <div class="cbh-big-text cbh-typing">— Сообщите нам,</div>
+                          <div class="cbh-normal-text cbh-typing">насколько вам понравилось общение с менеджером?</div>
+                          <ul class="cbh-call-rating">
+                              <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_1" data-value="1">1</a>
+                              </li>
+                              <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_2" data-value="2">2</a>
+                              </li>
+                              <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_3" data-value="3">3</a>
+                              </li>
+                              <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_4" data-value="4">4</a>
+                              </li>
+                              <li><a href="http://landingpage.1001click.ru/#" id="cbh_call_rating_5" data-value="5">5</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="cbh-item cbh-show" id="cbh_item_dialog" style="height: 262px !important; bottom: 0px !important;">
+                      <div class="cbh-text" id="cbh_item_dialog_content">
+                          <div class="cbh-big-text cbh-typed undefined">— Упс, сейчас</div>
+                          <div class="cbh-normal-text cbh-typed">в офисе ни души. Закажем на завтра обратный звонок или напишем письмо?<span class="cbh-cursor">_</span>
+                          </div>
+                          <div class="cbh-form cbh-show">
+                              <div>
+                                  <div data-index="0" class="cbh-form-elem">
+                                      <div class="cbh-button">Закажем звонок</div>
+                                  </div>
+                                  <div class="cbh-form-error-message" id="cbh_form_error_0"></div>
+                              </div>
+                              <div>
+                                  <div data-index="1" class="cbh-form-elem">
+                                      <div class="cbh-button">Напишем письмо</div>
+                                  </div>
+                                  <div class="cbh-form-error-message" id="cbh_form_error_1"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="cbh-item" id="cbh_chat" style="height: 60%;">
+                      <div class="cbh-text">
+                          <div class="cbh-big-text cbh-centered cbh-typing">Мгновенный чат</div>
+                          <div class="cbh-normal-text cbh-centered cbh-typing">Общайтесь. Делитесь. Пишите.</div>
+                      </div>
+                      <div class="cbh-chat">
+                          <div class="cbh-messages">
+                              <div class="cbh-messages-wrapper">
+                                  <div id="cbh_chat_messages" class="cbh-messages-scrollable"></div>
+                              </div>
+                          </div>
+                          <div class="cbh-chat-input">
+                              <input type="text" class="cbh-input" id="cbh_chat_msg" placeholder="Напишите сообщение и нажмите Enter">
+                              <div class="cbh-btn" id="cbh_chat_send">Отправить</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="cbh-powered-by"><a href="http://callbackhunter.com/free?utm_source=widget" class="cbh-powered-by-link" target="_blank">New communication standard by&nbsp;callbackhunter.com</a>
+              </div>
+          </div>
+          <div class="cbh-branding"></div>
+      </div>
+  </div>
+  <div>
+      <div class="cbh-banner-bg" style="display: none;"></div>
+  </div> -->
 </body>
 
 </html>
