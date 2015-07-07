@@ -1206,91 +1206,8 @@ $(function() {
 
   /* модалки */
 
-  $('.get-cons').on('click', function() {
-    modal.show('#consoltation');
-    return false;
-  });
-
-  $(document).on('click', '.modal', function() {
-    return false;
-  });
-  $(document).on('click', '.modal .close', function() {
-    modal.close();
-  });
-  $(document).on('click', function() {
-    modal.close();
-  });
 
   $("input[name=phone]").mask("+7(999) 999-9999");
-
-  $('.go').on('click', function(e) {
-
-    e.stopPropagation();
-    e.preventDefault();
-
-    var $form = $(this).closest('.form');
-
-    var data = Object();
-
-    var inputs = $form.find('input').add('textarea', $form.get(0));
-
-    var validate = true;
-
-    inputs.each(function() {
-
-      var rules = $(this).data('rules');
-
-      if (rules && rules.length != 0) {
-        rules = rules.split(',');
-
-        for (i = 0; i < rules.length; i++) {
-          var rule = rules[i];
-          //console.log(rule);
-          if (validator[rule]) {
-            if (!validator[rule]($(this))) {
-              validate = false;
-              return false;
-            }
-          }
-        }
-      }
-
-      //console.log($(this).attr('name'));
-
-      data[$(this).attr('name')] = $(this).val();
-    });
-
-    if (!validate) return;
-
-    var template = $form.data('template');
-    var theme = $form.data('theme');
-
-    if (!template) template = 'default';
-
-    //console.log(template);
-
-    $.ajax({
-      url: 'mail.php',
-      data: {
-        data: data,
-        template: template,
-        theme: theme
-      },
-      type: 'post',
-      dataType: 'JSON',
-      success: function(data) {
-        //console.log(data);
-        yaCounter24030415.reachGoal('GOOD');
-        if (data.success == 1) {
-          modal.show('#success');
-        } else {
-          alert(lang.error);
-        }
-      }
-    })
-
-    return false;
-  });
 
   $('#header')
     .add('#cap_b')
@@ -1355,13 +1272,13 @@ $(function() {
 
   });
 
-  $('.price_b').foShowed(function() {
+  // $('.price_b').foShowed(function() {
 
-    this.afterTime(function() {
-      $(this).addClass('animate');
-    }, 300);
+  //   this.afterTime(function() {
+  //     $(this).addClass('animate');
+  //   }, 300);
 
-  });
+  // });
 
   $('#work_b').foShowed(function() {
 
@@ -1477,8 +1394,13 @@ var showMap = function() {
 
     this.each(function() {
       var img = $(this).css('background-image');
+      console.log(img);
       img = img.replace(/url\(\"*http:\/\/[a-zA-Z0-9\.]*/, '')
+      console.log('st2 ' + img);
       img = img.replace(/\"*\)$/, '')
+      console.log('st3 ' + img);
+      img = img.replace(/:(3000)/, '')
+      console.log('st4 ' + img);
 
       $('#parallax').append('<img src="" alt="">');
 
