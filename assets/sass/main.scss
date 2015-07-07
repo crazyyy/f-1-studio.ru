@@ -42,9 +42,10 @@ b {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-
+  /*
   background: url('../img/bg1.jpg') center 0 no-repeat;
   background-size: cover;
+  */
   .header_c {
     position: relative;
     z-index: 2;
@@ -348,9 +349,9 @@ b {
 
   height: 443px;
   margin-bottom: 80px;
+  /*   background: url('../img/bg2.jpg') 50% 0 no-repeat;
+background-size: cover; */
 
-  background: url('../img/bg2.jpg') 50% 0 no-repeat;
-  background-size: cover;
   box-shadow: 0 0 10px #555;
   .b_inner {
     position: relative;
@@ -528,9 +529,9 @@ b {
 
   height: 630px;
   margin-bottom: 80px;
+  /*   background: url('../img/bg3.jpg') center top no-repeat;
+background-size: cover; */
 
-  background: url('../img/bg3.jpg') center top no-repeat;
-  background-size: cover;
   box-shadow: 0 0 10px #555;
   .b_inner {
     position: relative;
@@ -588,6 +589,7 @@ b {
 
 .partners_b {
   display: table;
+  display: none;
 
   margin-bottom: 40px;
   .row {
@@ -633,9 +635,9 @@ b {
   position: relative;
 
   height: 340px;
+  /*   background: url('../img/bg4.jpg') center top no-repeat;
+background-size: cover; */
 
-  background: url('../img/bg4.jpg') center top no-repeat;
-  background-size: cover;
   box-shadow: 0 0 10px #555;
   .b_inner {
     position: relative;
@@ -675,7 +677,7 @@ b {
 
     width: 964px;
     margin: 0 auto;
-    padding-top: 55px;
+    padding-top: 25px;
   }
   strong {
     font-weight: 700;
@@ -927,19 +929,22 @@ b {
 
       margin: auto;
 
+      text-decoration: none;
+
       color: #1da6f5;
+      color: #fff;
       border-bottom: dotted 1px;
       text-shadow: 0 0 8px rgba(0, 0, 0, .8);
+      h5 {
+        font-size: 20px;
+        font-weight: 200;
+
+        margin-top: 0;
+        margin-bottom: 20px;
+
+        text-shadow: 0 0 8px rgba(0, 0, 0, .8);
+      }
     }
-  }
-  h5 {
-    font-size: 20px;
-    font-weight: 200;
-
-    margin-top: 0;
-    margin-bottom: 20px;
-
-    text-shadow: 0 0 8px rgba(0, 0, 0, .8);
   }
 }
 
@@ -1548,7 +1553,7 @@ b {
 }
 
 #header + #content > #left > #rlblock_left {
-    display: none !important;
+  display: none !important;
 }
 
 @import 'import/yamps';

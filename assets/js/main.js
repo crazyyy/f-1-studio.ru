@@ -1263,14 +1263,14 @@ $(function() {
 
   });
 
-  $('.partners_b').foShowed(function() {
+  // $('.partners_b').foShowed(function() {
 
-    this.find('.item img')
-      .afterTime(function() {
-        $(this).addClass('animate');
-      }, 300);
+  //   this.find('.item img')
+  //     .afterTime(function() {
+  //       $(this).addClass('animate');
+  //     }, 300);
 
-  });
+  // });
 
   // $('.price_b').foShowed(function() {
 
@@ -1385,47 +1385,47 @@ var showMap = function() {
       shift: 0
     }, o);
 
-    if (init) {
-      $(window).on('scroll', scroll);
+    // if (init) {
+    //   $(window).on('scroll', scroll);
 
-      $('body').append('<div id="parallax" style="position:absolute; top:0; left: -5000px; overflow: hidden; width: 5000px;"></div>');
-      init = false;
-    }
+    //   $('body').append('<div id="parallax" style="position:absolute; top:0; left: -5000px; overflow: hidden; width: 5000px;"></div>');
+    //   init = false;
+    // }
 
-    this.each(function() {
-      var img = $(this).css('background-image');
-      console.log(img);
-      img = img.replace(/url\(\"*http:\/\/[a-zA-Z0-9\.]*/, '')
-      console.log('st2 ' + img);
-      img = img.replace(/\"*\)$/, '')
-      console.log('st3 ' + img);
-      img = img.replace(/:(3000)/, '')
-      console.log('st4 ' + img);
+    // this.each(function() {
+    //   var img = $(this).css('background-image');
+    //   console.log(img);
+    //   img = img.replace(/url\(\"*http:\/\/[a-zA-Z0-9\.]*/, '')
+    //   console.log('st2 ' + img);
+    //   img = img.replace(/\"*\)$/, '')
+    //   console.log('st3 ' + img);
+    //   img = img.replace(/:(3000)/, '')
+    //   console.log('st4 ' + img);
 
-      $('#parallax').append('<img src="" alt="">');
+    //   $('#parallax').append('<img src="" alt="">');
 
-      var $this = this;
+    //   var $this = this;
 
-      $('#parallax img').last().on('load', function() {
+    //   $('#parallax img').last().on('load', function() {
 
-        if ($($this).css('background-size') == 'cover') {
-          var h = ($(this).height() * $('body').width()) / $(this).width();
-        } else {
-          var h = $(this).height();
-        }
+    //     if ($($this).css('background-size') == 'cover') {
+    //       var h = ($(this).height() * $('body').width()) / $(this).width();
+    //     } else {
+    //       var h = $(this).height();
+    //     }
 
-        boxs.push({
-          obj: $($this),
-          h: h,
-          limit: h - $($this).outerHeight(),
-          oh: $($this).outerHeight(),
-          top: $($this).position().top,
-          option: option
-        });
-        scroll();
-      }).attr('src', img);
+    //     boxs.push({
+    //       obj: $($this),
+    //       h: h,
+    //       limit: h - $($this).outerHeight(),
+    //       oh: $($this).outerHeight(),
+    //       top: $($this).position().top,
+    //       option: option
+    //     });
+    //     scroll();
+    //   }).attr('src', img);
 
-    });
+    // });
 
   };
 
