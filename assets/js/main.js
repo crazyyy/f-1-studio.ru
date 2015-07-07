@@ -69,15 +69,15 @@
     maxScale: 1.0,
     duration: 600,
     btnNext: null,
-    btnNextCallback: function() {},
+    btnNextCallback: function () {},
     btnPrev: null,
-    btnPrevCallback: function() {},
+    btnPrevCallback: function () {},
     btnToggleAutoplay: null,
     btnStartAutoplay: null,
     btnStopAutoplay: null,
     easing: "swing",
     clickToFocus: true,
-    clickToFocusCallback: function() {},
+    clickToFocusCallback: function () {},
     focusBearing: 0.0,
     shape: "lazySusan",
     debug: false,
@@ -88,13 +88,13 @@
     autoplay: false,
     autoplayDuration: 1000,
     autoplayPauseOnHover: false,
-    autoplayCallback: function() {},
+    autoplayCallback: function () {},
     autoplayInitialDelay: 0,
     enableDrag: false,
     dropDuration: 600,
     dropEasing: "swing",
     dropAnimateTo: "nearest",
-    dropCallback: function() {},
+    dropCallback: function () {},
     dragAxis: "x",
     dragFactor: 4,
     triggerFocusEvents: true,
@@ -125,12 +125,12 @@
         now = (new Date()).getTime();
 
       options = (typeof options === "object") ? options : {};
-      callback = ($.isFunction(callback)) ? callback : function() {};
+      callback = ($.isFunction(callback)) ? callback : function () {};
       callback = ($.isFunction(options)) ? options : callback;
       settings = $.extend({}, defaults, options, internalData);
 
       return this
-        .each(function() {
+        .each(function () {
           // make options
           var self = $(this),
             childCount = self.children(settings.childSelector).length,
@@ -167,7 +167,7 @@
           } else {
             // bind responsive action
             if (settings.responsive) {
-              $(window).bind("resize", function() {
+              $(window).bind("resize", function () {
                 methods.stopAutoplay.apply(self);
                 methods.relayoutChildren.apply(self);
               });
@@ -180,7 +180,7 @@
               .children(settings.childSelector)
               .each(function(i) {
                 $(this)
-                  .bind("click.roundabout", function() {
+                  .bind("click.roundabout", function () {
                     var degrees = methods.getPlacement.apply(self, [i]);
 
                     if (!methods.isInFocus.apply(self, [degrees])) {
@@ -197,7 +197,7 @@
           // bind next buttons
           if (settings.btnNext) {
             $(settings.btnNext)
-              .bind("click.roundabout", function() {
+              .bind("click.roundabout", function () {
                 if (!self.data("roundabout").animating) {
                   methods.animateToNextChild.apply(self, [self.data("roundabout").btnNextCallback]);
                 }
@@ -208,7 +208,7 @@
           // bind previous buttons
           if (settings.btnPrev) {
             $(settings.btnPrev)
-              .bind("click.roundabout", function() {
+              .bind("click.roundabout", function () {
                 methods.animateToPreviousChild.apply(self, [self.data("roundabout").btnPrevCallback]);
                 return false;
               });
@@ -217,7 +217,7 @@
           // bind toggle autoplay buttons
           if (settings.btnToggleAutoplay) {
             $(settings.btnToggleAutoplay)
-              .bind("click.roundabout", function() {
+              .bind("click.roundabout", function () {
                 methods.toggleAutoplay.apply(self);
                 return false;
               });
@@ -226,7 +226,7 @@
           // bind start autoplay buttons
           if (settings.btnStartAutoplay) {
             $(settings.btnStartAutoplay)
-              .bind("click.roundabout", function() {
+              .bind("click.roundabout", function () {
                 methods.startAutoplay.apply(self);
                 return false;
               });
@@ -235,7 +235,7 @@
           // bind stop autoplay buttons
           if (settings.btnStopAutoplay) {
             $(settings.btnStopAutoplay)
-              .bind("click.roundabout", function() {
+              .bind("click.roundabout", function () {
                 methods.stopAutoplay.apply(self);
                 return false;
               });
@@ -244,10 +244,10 @@
           // autoplay pause on hover
           if (settings.autoplayPauseOnHover) {
             self
-              .bind("mouseenter.roundabout.autoplay", function() {
+              .bind("mouseenter.roundabout.autoplay", function () {
                 methods.stopAutoplay.apply(self, [true]);
               })
-              .bind("mouseleave.roundabout.autoplay", function() {
+              .bind("mouseleave.roundabout.autoplay", function () {
                 methods.startAutoplay.apply(self);
               });
           }
@@ -282,7 +282,7 @@
 
             // on mobile
             self
-              .each(function() {
+              .each(function () {
                 var element = $(this).get(0),
                   data = $(this).data("roundabout"),
                   page = (data.dragAxis.toLowerCase() === "x") ? "pageX" : "pageY",
@@ -324,7 +324,7 @@
       var self = $(this),
         data = self.data("roundabout");
 
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       self.children(data.childSelector).each(function(i) {
         var startWidth, startHeight, startFontSize,
@@ -362,7 +362,7 @@
 
       // start autoplay if necessary
       if (data.autoplay) {
-        data.autoplayStartTimeout = setTimeout(function() {
+        data.autoplayStartTimeout = setTimeout(function () {
           methods.startAutoplay.apply(self);
         }, data.autoplayInitialDelay);
       }
@@ -379,9 +379,9 @@
 
     // updateChildren
     // move children elements into their proper locations
-    updateChildren: function() {
+    updateChildren: function () {
       return this
-        .each(function() {
+        .each(function () {
           var self = $(this),
             data = self.data("roundabout"),
             inFocus = -1,
@@ -431,7 +431,7 @@
           self.children(data.childSelector)
             .each(function(i) {
               if (methods.updateChild.apply(self, [$(this), info, i,
-                function() {
+                function () {
                   $(this).trigger('ready');
                 }
               ]) && (!info.animating || data.lastAnimationStep)) {
@@ -475,7 +475,7 @@
         out = [],
         rad = methods.degToRad.apply(null, [(360.0 - data.degrees) + info.bearing]);
 
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       // adjust radians to be between 0 and Math.PI * 2
       rad = methods.normalizeRad.apply(null, [rad]);
@@ -536,11 +536,11 @@
     // setBearing
     // changes the bearing of the roundabout
     setBearing: function(bearing, callback) {
-      callback = callback || function() {};
+      callback = callback || function () {};
       bearing = methods.normalize.apply(null, [bearing]);
 
       this
-        .each(function() {
+        .each(function () {
           var diff, lowerValue, higherValue,
             self = $(this),
             data = self.data("roundabout"),
@@ -578,13 +578,13 @@
     // adjustBearing
     // change the bearing of the roundabout by a given degree
     adjustBearing: function(delta, callback) {
-      callback = callback || function() {};
+      callback = callback || function () {};
       if (delta === 0) {
         return this;
       }
 
       this
-        .each(function() {
+        .each(function () {
           methods.setBearing.apply($(this), [$(this).data("roundabout").bearing + delta]);
         });
 
@@ -596,10 +596,10 @@
     // setTilt
     // changes the tilt of the roundabout
     setTilt: function(tilt, callback) {
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       this
-        .each(function() {
+        .each(function () {
           $(this).data("roundabout").tilt = tilt;
           methods.updateChildren.apply($(this));
         });
@@ -613,10 +613,10 @@
     // adjustTilt
     // changes the tilt of the roundabout
     adjustTilt: function(delta, callback) {
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       this
-        .each(function() {
+        .each(function () {
           methods.setTilt.apply($(this), [$(this).data("roundabout").tilt + delta]);
         });
 
@@ -634,7 +634,7 @@
     animateToBearing: function(bearing, duration, easing, passedData, callback) {
       var now = (new Date()).getTime();
 
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       // find callback function in arguments
       if ($.isFunction(passedData)) {
@@ -649,7 +649,7 @@
       }
 
       this
-        .each(function() {
+        .each(function () {
           var timer, easingFn, newBearing,
             self = $(this),
             data = self.data("roundabout"),
@@ -699,8 +699,8 @@
             data.dragBearing = newBearing;
 
             methods.setBearing.apply(self, [newBearing,
-              function() {
-                setTimeout(function() { // done with a timeout so that each step is displayed
+              function () {
+                setTimeout(function () { // done with a timeout so that each step is displayed
                   methods.animateToBearing.apply(self, [bearing, thisDuration, thisEasingType, passedData, callback]);
                 }, 0);
               }
@@ -712,7 +712,7 @@
 
             bearing = methods.normalize.apply(null, [bearing]);
             methods.setBearing.apply(self, [bearing,
-              function() {
+              function () {
                 self.trigger("animationEnd");
               }
             ]);
@@ -733,7 +733,7 @@
     animateToNearbyChild: function(passedArgs, which) {
       var duration = passedArgs[0],
         easing = passedArgs[1],
-        callback = passedArgs[2] || function() {};
+        callback = passedArgs[2] || function () {};
 
       // find callback
       if ($.isFunction(easing)) {
@@ -745,7 +745,7 @@
       }
 
       return this
-        .each(function() {
+        .each(function () {
           var j, range,
             self = $(this),
             data = self.data("roundabout"),
@@ -805,7 +805,7 @@
     // animateToNearestChild
     // animates roundabout to the nearest child
     animateToNearestChild: function(duration, easing, callback) {
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       // find callback
       if ($.isFunction(easing)) {
@@ -817,7 +817,7 @@
       }
 
       return this
-        .each(function() {
+        .each(function () {
           var nearest = methods.getNearestChild.apply($(this));
           methods.animateToChild.apply($(this), [nearest, duration, easing, callback]);
         });
@@ -827,7 +827,7 @@
     // animateToChild
     // animates roundabout to a given child position
     animateToChild: function(childPosition, duration, easing, callback) {
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       // find callback
       if ($.isFunction(easing)) {
@@ -839,7 +839,7 @@
       }
 
       return this
-        .each(function() {
+        .each(function () {
           var child,
             self = $(this),
             data = self.data("roundabout");
@@ -869,7 +869,7 @@
     // animateToDelta
     // animates roundabout to a given delta (in degrees)
     animateToDelta: function(degrees, duration, easing, callback) {
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       // find callback
       if ($.isFunction(easing)) {
@@ -881,7 +881,7 @@
       }
 
       return this
-        .each(function() {
+        .each(function () {
           var delta = $(this).data("roundabout").bearing + degrees;
           methods.animateToBearing.apply($(this), [delta, duration, easing, callback]);
         });
@@ -891,7 +891,7 @@
     // animateBearingToFocus
     // animates roundabout to bring a given angle into focus
     animateBearingToFocus: function(degrees, duration, easing, callback) {
-      callback = callback || function() {};
+      callback = callback || function () {};
 
       // find callback
       if ($.isFunction(easing)) {
@@ -903,7 +903,7 @@
       }
 
       return this
-        .each(function() {
+        .each(function () {
           var delta = $(this).data("roundabout").bearing - degrees;
           delta = (Math.abs(360 - delta) < Math.abs(delta)) ? 360 - delta : -delta;
           delta = (delta > 180) ? -(360 - delta) : delta;
@@ -917,9 +917,9 @@
 
     // stopAnimation
     // if an animation is currently in progress, stop it
-    stopAnimation: function() {
+    stopAnimation: function () {
       return this
-        .each(function() {
+        .each(function () {
           $(this).data("roundabout").stopAnimation = true;
         });
     },
@@ -927,9 +927,9 @@
 
     // allowAnimation
     // clears the stop-animation hold placed by stopAnimation
-    allowAnimation: function() {
+    allowAnimation: function () {
       return this
-        .each(function() {
+        .each(function () {
           $(this).data("roundabout").stopAnimation = false;
         });
     },
@@ -943,14 +943,14 @@
     // starts autoplaying this roundabout
     startAutoplay: function(callback) {
       return this
-        .each(function() {
+        .each(function () {
           var self = $(this),
             data = self.data("roundabout");
 
-          callback = callback || data.autoplayCallback || function() {};
+          callback = callback || data.autoplayCallback || function () {};
 
           clearInterval(data.autoplayInterval);
-          data.autoplayInterval = setInterval(function() {
+          data.autoplayInterval = setInterval(function () {
             methods.animateToNextChild.apply(self, [callback]);
           }, data.autoplayDuration);
           data.autoplayIsRunning = true;
@@ -964,7 +964,7 @@
     // stops autoplaying this roundabout
     stopAutoplay: function(keepAutoplayBindings) {
       return this
-        .each(function() {
+        .each(function () {
           clearInterval($(this).data("roundabout").autoplayInterval);
           $(this).data("roundabout").autoplayInterval = null;
           $(this).data("roundabout").autoplayIsRunning = false;
@@ -983,11 +983,11 @@
     // toggles autoplay pause/resume
     toggleAutoplay: function(callback) {
       return this
-        .each(function() {
+        .each(function () {
           var self = $(this),
             data = self.data("roundabout");
 
-          callback = callback || data.autoplayCallback || function() {};
+          callback = callback || data.autoplayCallback || function () {};
 
           if (!methods.isAutoplaying.apply($(this))) {
             methods.startAutoplay.apply($(this), [callback]);
@@ -1000,7 +1000,7 @@
 
     // isAutoplaying
     // is this roundabout currently autoplaying?
-    isAutoplaying: function() {
+    isAutoplaying: function () {
       return (this.data("roundabout").autoplayIsRunning);
     },
 
@@ -1009,7 +1009,7 @@
     // stops the autoplay, changes the duration, restarts autoplay
     changeAutoplayDuration: function(duration) {
       return this
-        .each(function() {
+        .each(function () {
           var self = $(this),
             data = self.data("roundabout");
 
@@ -1017,7 +1017,7 @@
 
           if (methods.isAutoplaying.apply(self)) {
             methods.stopAutoplay.apply(self);
-            setTimeout(function() {
+            setTimeout(function () {
               methods.startAutoplay.apply(self);
             }, 10);
           }
@@ -1083,9 +1083,9 @@
 
     // relayoutChildren
     // lays out children again with new contextual information
-    relayoutChildren: function() {
+    relayoutChildren: function () {
       return this
-        .each(function() {
+        .each(function () {
           var self = $(this),
             settings = $.extend({}, self.data("roundabout"));
 
@@ -1097,7 +1097,7 @@
 
     // getNearestChild
     // gets the nearest child from the current bearing
-    getNearestChild: function() {
+    getNearestChild: function () {
       var self = $(this),
         data = self.data("roundabout"),
         length = self.children(data.childSelector).length;
@@ -1144,7 +1144,7 @@
 
     // getChildInFocus
     // returns the current child in focus, or false if none are in focus
-    getChildInFocus: function() {
+    getChildInFocus: function () {
       var data = $(this).data("roundabout");
 
       return (data.childInFocus > -1) ? data.childInFocus : false;
@@ -1201,7 +1201,7 @@
 })(jQuery);
 
 
-$(function() {
+$(function () {
 
 
   /* модалки */
@@ -1226,7 +1226,7 @@ $(function() {
   });
 
 
-  $(document).on('scroll', function() {
+  $(document).on('scroll', function () {
 
     if ($(this).scrollTop() >= $('#header').height()) {
       $('#f_contact .contact_l').addClass('fix-contact');
@@ -1236,54 +1236,54 @@ $(function() {
 
   });
 
-  $('.about_b').foShowed(function() {
+  $('.about_b').foShowed(function () {
 
     this.find('.item')
-      .afterTime(function() {
+      .afterTime(function () {
         $(this).addClass('animate');
       }, 300);
 
   });
 
-  $('.cap_b').foShowed(function() {
+  $('.cap_b').foShowed(function () {
 
     $('.c_box', this).add('.form', this)
-      .afterTime(function() {
+      .afterTime(function () {
         $(this).addClass('animate');
       }, 500);
 
   });
 
-  $('.features_b').foShowed(function() {
+  $('.features_b').foShowed(function () {
 
     this.find('.item')
-      .afterTime(function() {
+      .afterTime(function () {
         $(this).addClass('animate');
       }, 300);
 
   });
 
-  $('.partners_b').foShowed(function() {
+  $('.partners_b').foShowed(function () {
 
     this.find('.item img')
-      .afterTime(function() {
+      .afterTime(function () {
         $(this).addClass('animate');
       }, 300);
 
   });
 
-  // $('.price_b').foShowed(function() {
+  // $('.price_b').foShowed(function () {
 
-  //   this.afterTime(function() {
+  //   this.afterTime(function () {
   //     $(this).addClass('animate');
   //   }, 300);
 
   // });
 
-  $('#work_b').foShowed(function() {
+  $('#work_b').foShowed(function () {
 
     this.find('#works_b').add('.slider_label', this)
-      .afterTime(function() {
+      .afterTime(function () {
         $(this).addClass('animate');
       }, 300);
 
@@ -1302,7 +1302,7 @@ $(function() {
 
   /* карусель */
 
-  $('.target').on('click', function() {
+  $('.target').on('click', function () {
 
     var t = $(this).data('target');
 
@@ -1314,7 +1314,7 @@ $(function() {
     }, 700);
   });
 
-  $('input').on('click', function() {
+  $('input').on('click', function () {
 
     $(this).removeClass('error');
 
@@ -1323,10 +1323,10 @@ $(function() {
 });
 
 
-var showMap = function() {
+var showMap = function () {
 
   if (window.ymaps) {
-    $('.map').each(function() {
+    $('.map').each(function () {
 
       var cord = $(this).data('center');
 
@@ -1392,7 +1392,7 @@ var showMap = function() {
     //   init = false;
     // }
 
-    // this.each(function() {
+    // this.each(function () {
     //   var img = $(this).css('background-image');
     //   console.log(img);
     //   img = img.replace(/url\(\"*http:\/\/[a-zA-Z0-9\.]*/, '')
@@ -1406,7 +1406,7 @@ var showMap = function() {
 
     //   var $this = this;
 
-    //   $('#parallax img').last().on('load', function() {
+    //   $('#parallax img').last().on('load', function () {
 
     //     if ($($this).css('background-size') == 'cover') {
     //       var h = ($(this).height() * $('body').width()) / $(this).width();
@@ -1491,11 +1491,11 @@ var showMap = function() {
 
     var pause = 0;
 
-    this.each(function() {
+    this.each(function () {
 
       var $this = this;
 
-      setTimeout(function() {
+      setTimeout(function () {
 
         f.apply($this, options)
 
@@ -1523,7 +1523,7 @@ var showMap = function() {
       offset: 0
     }, o);
 
-    $(document).on('scroll.' + marker, function() {
+    $(document).on('scroll.' + marker, function () {
 
       if (option.full) {
 
@@ -1579,14 +1579,14 @@ var showMap = function() {
   }, e.fn.extend({
     caret: function(e, t) {
       var n;
-      if (0 !== this.length && !this.is(":hidden")) return "number" == typeof e ? (t = "number" == typeof t ? t : e, this.each(function() {
+      if (0 !== this.length && !this.is(":hidden")) return "number" == typeof e ? (t = "number" == typeof t ? t : e, this.each(function () {
         this.setSelectionRange ? this.setSelectionRange(e, t) : this.createTextRange && (n = this.createTextRange(), n.collapse(!0), n.moveEnd("character", t), n.moveStart("character", e), n.select())
       })) : (this[0].setSelectionRange ? (e = this[0].selectionStart, t = this[0].selectionEnd) : document.selection && document.selection.createRange && (n = document.selection.createRange(), e = 0 - n.duplicate().moveStart("character", -1e5), t = e + n.text.length), {
         begin: e,
         end: t
       })
     },
-    unmask: function() {
+    unmask: function () {
       return this.trigger("unmask")
     },
     mask: function(t, r) {
@@ -1596,7 +1596,7 @@ var showMap = function() {
         completed: null
       }, r), l = e.mask.definitions, s = [], u = h = t.length, f = null, e.each(t.split(""), function(e, t) {
         "?" == t ? (h--, u = e) : l[t] ? (s.push(RegExp(l[t])), null === f && (f = s.length - 1)) : s.push(null)
-      }), this.trigger("unmask").each(function() {
+      }), this.trigger("unmask").each(function () {
         function c(e) {
           for (; h > ++e && !s[e];);
           return e
@@ -1667,22 +1667,22 @@ var showMap = function() {
             return "?" != e ? l[e] ? r.placeholder : e : void 0
           }),
           S = x.val();
-        x.data(e.mask.dataName, function() {
+        x.data(e.mask.dataName, function () {
           return e.map(R, function(e, t) {
             return s[t] && e != r.placeholder ? e : null
           }).join("")
-        }), x.attr("readonly") || x.one("unmask", function() {
+        }), x.attr("readonly") || x.one("unmask", function () {
           x.unbind(".mask").removeData(e.mask.dataName)
-        }).bind("focus.mask", function() {
+        }).bind("focus.mask", function () {
           clearTimeout(n);
           var e;
-          S = x.val(), e = y(), n = setTimeout(function() {
+          S = x.val(), e = y(), n = setTimeout(function () {
             b(), e == t.length ? x.caret(0, e) : x.caret(e)
           }, 10)
-        }).bind("blur.mask", function() {
+        }).bind("blur.mask", function () {
           y(), x.val() != S && x.change()
-        }).bind("keydown.mask", g).bind("keypress.mask", v).bind(a, function() {
-          setTimeout(function() {
+        }).bind("keydown.mask", g).bind("keypress.mask", v).bind(a, function () {
+          setTimeout(function () {
             var e = y(!0);
             x.caret(e), r.completed && e == x.val().length && r.completed.call(x)
           }, 0)

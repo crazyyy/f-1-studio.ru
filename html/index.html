@@ -50,7 +50,7 @@
       ФАКТЫ
     </div>
     <div class="b_title b_inner">
-      Факты о нашей компании
+      Факты о нашей 3D студии
     </div>
   </div>
 
@@ -90,7 +90,7 @@
     <div class="item item4">
       <div class="c">
         <div class="i_title">
-          Мы настолько уверенные в качестве своей работы, что оставляем за вами право не оплачивать наш труд, если результат вам не понравится
+          Мы настолько уверены в качестве своей работы, что оставляем за вами право не оплачивать наш труд, если результат вам не понравится
         </div>
         <!--                 <div class="i_dsc">
     Мы разберемся в тонкостях вашей ниши и
@@ -144,7 +144,7 @@
     </div>
     <a name="benefits"></a>
     <div class="b_title b_inner">
-      Мы делаем качественную визуализацию, максимально прибиженную к реальному виду обьекта.
+      Мы делаем качественную визуализацию, максимально приближенную к реальному виду обьекта.
     </div>
   </div>
 
@@ -302,7 +302,7 @@
       НАШИ КЛИЕНТЫ
     </div>
     <div class="b_title b_inner">
-      Среди наших клиентов - известные команиии и дизайн-студии.
+      Среди наших клиентов - известные компании и дизайн-студии.
     </div>
   </div>
 
@@ -479,34 +479,7 @@
 
       <div class="offer_link">
         <a href="privacy.html">Политика конфиденциальности</a>
-        <!-- Yandex.Metrika counter -->
-        <script type="text/javascript">
-            (function (d, w, c) {
-                (w[c] = w[c] || []).push(function() {
-                    try {
-                        w.yaCounter31309848 = new Ya.Metrika({
-                            id:31309848,
-                            clickmap:true,
-                            trackLinks:true,
-                            accurateTrackBounce:true
-                        });
-                    } catch(e) { }
-                });
 
-                var n = d.getElementsByTagName("script")[0],
-                    s = d.createElement("script"),
-                    f = function () { n.parentNode.insertBefore(s, n); };
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-                if (w.opera == "[object Opera]") {
-                    d.addEventListener("DOMContentLoaded", f, false);
-                } else { f(); }
-            })(document, window, "yandex_metrika_callbacks");
-        </script>
-        <noscript><div><img src="https://mc.yandex.ru/watch/31309848" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-        <!-- /Yandex.Metrika counter -->
       </div>
     </div>
   </div>
@@ -727,15 +700,48 @@
   <div>
       <div class="cbh-banner-bg"></div>
   </div> -->
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+              helpers: {
+                overlay: {
+                  locked: false
+                }
+              }
+            });
+        });
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter31309848 = new Ya.Metrika({
+                    id:31309848,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
 
-  <script src="js/jquery.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/parallax.min.js"></script>
-  <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".fancybox").fancybox();
-    });
-  </script>
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/31309848" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>
