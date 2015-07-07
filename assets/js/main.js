@@ -1263,14 +1263,14 @@ $(function() {
 
   });
 
-  // $('.partners_b').foShowed(function() {
+  $('.partners_b').foShowed(function() {
 
-  //   this.find('.item img')
-  //     .afterTime(function() {
-  //       $(this).addClass('animate');
-  //     }, 300);
+    this.find('.item img')
+      .afterTime(function() {
+        $(this).addClass('animate');
+      }, 300);
 
-  // });
+  });
 
   // $('.price_b').foShowed(function() {
 
