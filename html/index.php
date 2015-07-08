@@ -70,10 +70,6 @@
         <div class="i_title">
           Отличное качество визуализации
         </div>
-        <!--                 <div class="i_dsc">
-    Каждый - с уникальным премиум-дизайном
-    <br>и высоким показателем конверсии.
-</div> -->
       </div>
     </div>
     <div class="item item3">
@@ -81,10 +77,6 @@
         <div class="i_title">
           Среди наших клиентов такие известные компании как APEGG (Великобритания)
         </div>
-        <!--                 <div class="i_dsc">
-    Средние ежемесячные продажи с наших
-    <br>лендингов составляют $175.000.
-</div> -->
       </div>
     </div>
     <div class="item item4">
@@ -92,28 +84,34 @@
         <div class="i_title">
           Мы настолько уверены в качестве своей работы, что оставляем за вами право не оплачивать наш труд, если результат вам не понравится
         </div>
-        <!--                 <div class="i_dsc">
-    Мы разберемся в тонкостях вашей ниши и
-    <br>сделаем ваш лендинг эффективным.
-</div> -->
       </div>
     </div>
   </div>
 
   <div class="f_line b_outer">
     <div class="form h_form b_inner c_fix">
-      <div class="col">
-        <input type="text" name="name" placeholder="Введите имя...">
-      </div>
-      <div class="col">
-        <input type="text" name="phone" placeholder="Номер телефона..." data-rules="required">
-      </div>
-      <div class="col">
-        <span class="btn btn-primary go">Получить консультацию!</span>
-      </div>
+      <form class="landform" action="data/form.php" method="POST">
+        <div class="col">
+          <input type="text" name="name" placeholder="Введите имя...">
+        </div>
+        <div class="col">
+          <input type="text" name="email" placeholder="Введите email...">
+        </div>
+        <div class="col">
+          <input type="hidden" name="hidden" value="ok">
+          <button class="btn btn-primary go">Получить консультацию!</button>
+        </div>
+        <div class="col-3 message-block">
+          <h6 class="message"></h6>
+          <div class="thanx">
+            <h4>Благодарим вас за заявку</h4>
+          </div><!-- thanx -->
+        </div><!-- message-block -->
+      </form><!-- landform -->
     </div>
-  </div>
-  <!-- f_line -->
+  </div><!-- f_line -->
+
+
 
   <div class="promo_b b_outer" id="plane_b" data-parallax="scroll" data-image-src="img/bg2.jpg">
     <div class="b_inner">
@@ -168,18 +166,6 @@
           Команда, которая будет работать над вашим проектом - настоящие профессионалы своего дела.
         </div>
       </div>
-      <!--             <div class="item item4">
-    <h6 class="i_title">Hsабота под ключ</h6>
-    <div class="i_dsc">
-        Постоянное тестирование различных элементов Landing Page позволит увеличить конверсию на 100-150%.
-    </div>
-</div> -->
-      <!--             <div class="item item5">
-    <h6 class="i_title">SEM (Контекстная реклама)</h6>
-    <div class="i_dsc">
-        Мы предлагаем Вам услуги сертифици- рованных специалистов сетей Google Adwords и Яндекс.Директ.
-    </div>
-</div> -->
       <div class="item item6">
         <h6 class="i_title">Работа «Под ключ»</h6>
         <div class="i_dsc">
@@ -192,18 +178,26 @@
 
   <div class="f_line b_outer">
     <div class="form h_form b_inner c_fix">
-      <div class="col">
-        <input type="text" name="name" placeholder="Введите имя...">
-      </div>
-      <div class="col">
-        <input type="text" name="phone" placeholder="Номер телефона..." data-rules="required">
-      </div>
-      <div class="col">
-        <span class="btn btn-primary go">Сделать заказ!</span>
-      </div>
+      <form class="landform" action="data/form.php" method="POST">
+        <div class="col">
+          <input type="text" name="name" placeholder="Введите имя...">
+        </div>
+        <div class="col">
+          <input type="text" name="email" placeholder="Введите email...">
+        </div>
+        <div class="col">
+          <input type="hidden" name="hidden" value="ok">
+          <button class="btn btn-primary go">Сделать заказ!</button>
+        </div>
+        <div class="col-3 message-block">
+          <h6 class="message"></h6>
+          <div class="thanx">
+            <h4>Благодарим вас за заявку</h4>
+          </div><!-- thanx -->
+        </div><!-- message-block -->
+      </form><!-- landform -->
     </div>
-  </div>
-  <!-- f_line -->
+  </div><!-- f_line -->
 
   <a name="case"></a>
   <div class="works_b b_outer portfolio" id="work_b" data-parallax="scroll" data-image-src="img/bg3.jpg">
@@ -351,19 +345,29 @@
           Отправьте заявку и получите <strong>бесплатную консультацию</strong>!
         </div>
       </div>
-      <div class="form h_form b_inner c_fix">
-        <div class="col">
-          <input type="text" name="name" placeholder="Введите имя...">
+      <form class="landform" action="data/form.php" method="POST">
+        <div class="form h_form b_inner c_fix">
+          <div class="col">
+            <input type="text" name="name" placeholder="Введите имя...">
+          </div>
+          <div class="col">
+            <input type="text" name="email" placeholder="Введите email...">
+          </div>
+          <div class="col">
+            <input type="hidden" name="hidden" value="ok">
+          <button class="btn btn-primary go">Получить консультацию!</button>
+          </div>
+          <div class="col-3 message-block">
+            <h6 class="message"></h6>
+            <div class="thanx">
+              <h4>Благодарим вас за заявку</h4>
+            </div><!-- thanx -->
+          </div><!-- message-block -->
         </div>
-        <div class="col">
-          <input type="text" name="phone" placeholder="Номер телефона..." data-rules="required">
-        </div>
-        <div class="col">
-          <span class="btn btn-primary go">Получить консультацию!</span>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
+
   <!-- cap_b -->
   <!-- <div class="price_b b_inner">
         <h1 class="price_t">СТОИМОСТЬ LANDING PAGE</h1>
@@ -456,71 +460,26 @@
 </div> -->
 
 
-  <div class="map_b b_outer" id="contacts">
+  <!-- <div class="map_b b_outer" id="contacts">
     <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ibJ0m6wBwA7C8_u3IM3tPiUiFRm7AHVD&height=370"></script>
-  </div>
+  </div> -->
   <!-- map_b -->
 
   <div class="contact_l b_outer f_contact">
     <div class="b_inner c_fix">
-
-
       <div class="m_logo"></div>
-
       <div class="contacts">
-        <!--             <div class="num">
-    8 (800) 500 42 93
-</div> -->
         <div class="addr">
           <br>
           <br>г.Омск, ул.Деловая 19, офис 3
         </div>
       </div>
-
       <div class="offer_link">
         <a href="privacy.html">Политика конфиденциальности</a>
-
       </div>
     </div>
   </div>
-  <div class="shadow">
-  </div>
-
-  <div class="alert" id="consoltation">
-    <b class="close"></b>
-    <div class="form m_form">
-      <div class="f_title">
-        Оставьте заявку
-      </div>
-      <div class="f_dsc">
-        и мы обязательно перезвоним
-      </div>
-      <div class="row">
-        <input type="text" name="name" placeholder="Введите имя...">
-      </div>
-      <div class="row">
-        <input type="text" name="phone" placeholder="Номер телефона..." data-rules="required">
-      </div>
-      <div class="row action">
-        <span class="btn btn-primary go">Сделать заказ</span>
-      </div>
-    </div>
-  </div>
-
-  <!--   <div id="success" class="alert">
-
-      <b class="close"></b>
-
-      <b class="i_success"></b>
-
-      <h2>Спасибо!</h2>
-
-      <p>Наш менеджер свяжется с вами
-          <br>в течение 15-ти минут!</p>
-
-  </div> -->
-
-
+  <div class="shadow"></div>
 
   <!--   <div id="cbh_widget_wrapper">
       <div class="cbh-widget en cbh-show" id="cbh_phone">
@@ -702,7 +661,7 @@
   </div> -->
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/parallax.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
     <script>
         $(document).ready(function () {
@@ -715,8 +674,10 @@
             });
         });
     </script>
+
+
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
+ <!--    <script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {

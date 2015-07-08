@@ -1,5 +1,6 @@
-@import 'import/reset';
 @import 'sprite';
+@import 'import/reset';
+@import 'import/simplemodal';
 @import 'font_fontawesome';
 @import 'font_roboto';
 @import 'font_myriadpro';
@@ -1568,6 +1569,13 @@ background-size: cover; */
 
   background: transparent !important;
 }
+.landform {
+  position: relative;
+}
+.message-block {
 
-/* @import 'import/yamps';
- */
+  text-align: center;
+  width: 100%;
+  float: left;
+  padding: 15px 0 0;
+}
