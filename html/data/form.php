@@ -18,7 +18,7 @@ if(@$_POST["hidden"])
     $phone=$_POST["email"];
 
     $mess.="Имя: $fnm\n";
-    $mess.="Почта: $email";
+    $mess.="Почта: $phone";
     $mess .= "\n\nIP: " . $_SERVER["REMOTE_ADDR"];
     $mess .= "\n\nUSER AGENT: " . $_SERVER["HTTP_USER_AGENT"];
 
