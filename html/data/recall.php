@@ -13,7 +13,7 @@
 date_default_timezone_set('Europe/Moscow');
 
 // User settings
-$to = "net.komaroff@mail.ru";
+$to = "f-1-studio@yandex.ru";
 $subject = "Заказ с посадочной страницы (перезвонить)";
 
 // Include extra form fields and/or submitter data?
@@ -37,15 +37,15 @@ if (empty($action)) {
         <h3>Оставьте заявку</h3>
         <p>и мы вам обязательно перезвоним в ближайшее время</p>
         <input type='text' id='contact-name' class='contact-input' name='name' placeholder='Введите Ваше имя' />
-        <input type='hidden' id='contact-email' class='contact-input' name='email' value='info@net-komaroff.ru' />
-        <input type='tel' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажие телефон 0 (000) 000-00-00' />";
+        <input type='hidden' id='contact-email' class='contact-input' name='email' value='f-1-studio@yandex.ru' />
+        <input type='email' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажие email' />";
 
   $output .= "
       <input type='hidden' id='contact-message' class='contact-input' name='message' value='Сообщение с формы ПЕРЕЗВОНИТЬ'>
       <br/>";
 
   $output .= "
-      <button type='submit' class='contact-send contact-button'>Заказать звонок</button>
+      <button type='submit' class='contact-send contact-button btn btn-primary go'>Заказать звонок</button>
       <br/>
       <input type='hidden' name='token' value='" . smcf_token($to) . "'/>
     </form>
@@ -66,15 +66,8 @@ else if ($action == "send") {
   if ($token === smcf_token($to)) {
     smcf_send($name, $email, $subject, $message, $cc);
     echo "<div class='thanx'>
-  <h4>Благодарим вас за заявку</h4>
-  <p>Менеджер свяжется с вами в ближайшее время. <br>
-  А пока можете:</p>
-  <ul>
-    <li>посмотреть короткое видео <a href='https://www.youtube.com/watch?v=9lhxtPUNP4I' target='_blank' class='yt'>«Уничтожитель комаров SketteerVac»</a></li>
-    <li>ознакомиться с <a href='instruction.pdf' target='_blank' class='pdf'>инструкцией по применению</a></li>
-  </ul>
-  </div>
-  <!-- /.thanx -->";
+    <h4>Благодарим вас за заявку</h4>
+    </div><!-- /.thanx -->";
   }
   else {
     echo "Unfortunately, your message could not be verified.";
@@ -101,7 +94,7 @@ function smcf_send($name, $email, $subject, $message, $cc) {
 
   // Set and wordwrap message body
   $body = "Имя: $name\n\n";
-  $body .= "Телефон: $phone\n\n";
+  $body .= "Почта: $phone\n\n";
   $body .= "Форма с просьбой перезвонить";
   $body .= "\n\nIP: " . $_SERVER["REMOTE_ADDR"];
   $body .= "\n\nUSER AGENT: " . $_SERVER["HTTP_USER_AGENT"];

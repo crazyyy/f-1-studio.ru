@@ -28,7 +28,7 @@
       <div class="b_inner c_fix">
         <div class="m_logo"></div>
         <div class="contacts">
-          <button class="btn btn-primary go">Заказать</button>
+          <button class="btn btn-primary go recall">Заказать</button>
         </div>
       </div>
     </div>
