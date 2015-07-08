@@ -35,17 +35,17 @@ if (empty($action)) {
 
       <form action='#' style='display:none'>
         <h3>Оставьте заявку</h3>
-        <p>и мы вам обязательно перезвоним в ближайшее время</p>
+        <p>и мы вам свяжемся с вами в ближайшее время</p>
         <input type='text' id='contact-name' class='contact-input' name='name' placeholder='Введите Ваше имя' />
         <input type='hidden' id='contact-email' class='contact-input' name='email' value='f-1-studio@yandex.ru' />
-        <input type='email' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажие email' />";
+        <input type='email' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажите email' />";
 
   $output .= "
       <input type='hidden' id='contact-message' class='contact-input' name='message' value='Сообщение с формы ПЕРЕЗВОНИТЬ'>
       <br/>";
 
   $output .= "
-      <button type='submit' class='contact-send contact-button btn btn-primary go'>Заказать звонок</button>
+      <button type='submit' class='contact-send contact-button btn btn-primary go'>Отправить</button>
       <br/>
       <input type='hidden' name='token' value='" . smcf_token($to) . "'/>
     </form>
