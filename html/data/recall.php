@@ -35,7 +35,7 @@ if (empty($action)) {
 
       <form action='#' style='display:none'>
         <h3>Оставьте заявку</h3>
-        <p>и мы вам свяжемся с вами в ближайшее время</p>
+        <p>и мы свяжемся с Вами в ближайшее время</p>
         <input type='text' id='contact-name' class='contact-input' name='name' placeholder='Введите Ваше имя' />
         <input type='hidden' id='contact-email' class='contact-input' name='email' value='f-1-studio@yandex.ru' />
         <input type='email' id='contact-tel' class='contact-input contact-phone' name='phone' placeholder='Укажите email' />";

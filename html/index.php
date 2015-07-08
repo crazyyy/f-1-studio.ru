@@ -462,9 +462,9 @@
 </div> -->
 
 
-  <!-- <div class="map_b b_outer" id="contacts">
+  <div class="map_b b_outer" id="contacts">
     <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=ibJ0m6wBwA7C8_u3IM3tPiUiFRm7AHVD&height=370"></script>
-  </div> -->
+  </div>
   <!-- map_b -->
 
   <div class="contact_l b_outer f_contact">
@@ -679,7 +679,7 @@
 
 
     <!-- Yandex.Metrika counter -->
- <!--    <script type="text/javascript">
+ <script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {
@@ -705,6 +705,6 @@
     })(document, window, "yandex_metrika_callbacks");
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/31309848" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+    <!-- /Yandex.Metrika counter
 </body>
 </html>
